@@ -12,6 +12,9 @@ class Dish(models.Model):
     title = models.CharField(max_length=100)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
+    class Meta:
+        verbose_name_plural = 'dishes'
+
 
 class Topping(models.Model):
     title = models.CharField(max_length=100)
